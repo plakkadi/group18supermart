@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Super Mart DBMS Project</title> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+    </head>
+
+
+    <body>
+
+        <div class="banner">
+            <div class = "logo">
+                <h1>Super Mart</h1>
+            </div>
+            <div class="Query-Form">
+                <form action="{{ url_for("index")}}" method="post">
+                    <label style="color:rgb(234, 192, 192)">Create Customer</label><br>
+                    <input type = "text" name = "add" placeholder = "Use (cust_id, cust_name, contact_no, payment_method)" id = "add" ><br>
+                    <label style="color:rgb(234, 192, 192)">Retrieve Data</label><br>
+                    <input type = "text" name = "trans_id" placeholder = "Use trans_id" id = "trans_id" ><br>
+                    <label style="color:rgb(234, 192, 192)">Update Customer Data</label><br>
+                    <input type = "text" name = "update_data" placeholder = "Use (cust_id, contact_no)" id = "update_data" ><br>
+                    <label style="color:rgb(234, 192, 192)">Delete Customer</label><br>
+                    <input type = "text" name = "cust_id" placeholder = "Use cust_id" id = "cust_id" ><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+
+            <div class = tables>
+
+                <table>
+                    <tr>
+                        {% for header in headings %}
+                        <th> {{ header }}</th>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for row in data %}
+                        <tr>
+                            {% for cell in row %}
+                            <td>{{ cell }}</td>
+                            {% endfor %}
+                        {% endfor %}
+                        </tr>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </body>
+
+</html>
