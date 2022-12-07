@@ -3,7 +3,7 @@
 
 REPO LINK:
 ---------------------------------------------------------------
-https://github.com/Vikas7548/SUPERMART
+https://github.com/plakkadi/group18supermart
 
 Github credentials:
 ---------------------------------------------------------------
